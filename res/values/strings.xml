@@ -7,4 +7,7 @@
     <string name="create">Create</string>
     <string name="choose">Choose</string>
     <string name="welcome">Welcome to Dinner Planner!</string>
+    <string name="starter">Starter</string>
+    <string name="main">Main</string>
+    <string name="dessert">Dessert</string>
 </resources>

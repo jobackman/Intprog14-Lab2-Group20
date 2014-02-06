@@ -9,18 +9,17 @@ import android.widget.TextView;
 public class participants {
 
         View view;
-        public TextView example;
+        public TextView participantsView;
 
         public participants(View view) {
 
             // store in the class the reference to the Android View
             this.view = view;
 
-            example = (TextView) view.findViewById(R.id.participantsText);
-            example.setText("Participants: ");
+            participantsView = (TextView) view.findViewById(R.id.participantsText);
+            participantsView.setText("Participants: ");
 
 
         }
 
-    }
 }
