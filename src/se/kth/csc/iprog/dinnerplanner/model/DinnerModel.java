@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class DinnerModel implements IDinnerModel { /****/
-    private int numberOfGuests;
+    private int numberOfGuests=0;
     private Set<Dish> selectedDishes;
     private Set<Ingredient> ingredients;
     private float totalPrice;
@@ -101,7 +101,9 @@ public class DinnerModel implements IDinnerModel { /****/
 
     @Override
     public int getNumberOfGuests() {
+
         return this.numberOfGuests;
+
     }
 
     @Override
