@@ -3,7 +3,9 @@ package se.kth.csc.iprog.dinnerplanner.android.view;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import java.util.HashSet;
 import java.util.Set;
 import se.kth.csc.iprog.dinnerplanner.android.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
@@ -16,18 +18,25 @@ public class starter {
 
     DinnerModel dynamicStarters = new DinnerModel();
     View view;
-
+    Set<Dish> starters = new HashSet<Dish>();
+    public ImageView img;
+    public TextView txt;
 
     public starter(View view){
 
         this.view = view;
         LinearLayout starterList = (LinearLayout) view.findViewById(R.id.starterLayout);
 
-        Set<Dish> starters = dynamicStarters.getDishesOfType(1);
-        for(Dish s : starters){
-            s.getImage();
-            
+        starters = dynamicStarters.getDishesOfType(1);
+        /**img = (ImageView) view.findViewById(R.id.starterImage);**/
+        txt = (TextView) view.findViewById(R.id.starterImg);
+        for(Dish s: starters){
+            /**img.setImageResource(R.drawable.);**/
+            txt.setText(s.getImage());
         }
+
+
+
 
        /**
         participantsView = (TextView) view.findViewById(R.id.participantsText);
