@@ -148,9 +148,14 @@ public class DinnerModel implements IDinnerModel { /****/
     @Override
     public float getTotalMenuPrice() {
 
-        for (Dish d : selectedDishes){
-            for (Ingredient i : d.getIngredients()){
-              totalPrice = totalPrice + (float) i.getPrice()*numberOfGuests;
+        if (selectedDishes==null){
+            totalPrice = 1337;
+        }
+        else {
+            for (Dish d : selectedDishes){
+                for (Ingredient i : d.getIngredients()){
+                totalPrice = totalPrice + (float) i.getPrice()*numberOfGuests;
+                }
             }
         }
         return totalPrice;

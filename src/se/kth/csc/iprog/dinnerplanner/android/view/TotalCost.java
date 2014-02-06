@@ -3,23 +3,23 @@ package se.kth.csc.iprog.dinnerplanner.android.view;
 import se.kth.csc.iprog.dinnerplanner.android.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
-public class btnNext {
+public class TotalCost {
 
+    DinnerModel dynamicPrice = new DinnerModel();
     View view;
-    public Button nextButton;
 
-    public btnNext(View view) {
+    public TotalCost(View view) {
 
         // store in the class the reference to the Android View
         this.view = view;
 
-        nextButton = (Button) view.findViewById(R.id.next_Button);
-        nextButton.setText("Create");
+        TextView totalcost = (TextView) view.findViewById(R.id.display_total_cost);
+        totalcost.setText("Total cost " + dynamicPrice.getTotalMenuPrice());
 
+
+        // Setup the rest of the view layout
     }
-
 
 }
