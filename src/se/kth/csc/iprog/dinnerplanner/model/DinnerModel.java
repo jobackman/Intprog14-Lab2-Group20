@@ -3,7 +3,7 @@ package se.kth.csc.iprog.dinnerplanner.model;
 import java.util.HashSet;
 import java.util.Set;
 
-public class DinnerModel {
+public class DinnerModel implements IDinnerPlanner {
 	
 
 	Set<Dish> dishes = new HashSet<Dish>();
@@ -13,8 +13,7 @@ public class DinnerModel {
 	 * When you do this you will have all the needed fields and methods
 	 * for the dinner planner (number of guests, selected dishes, etc.). 
 	 */
-	
-	
+
 	/**
 	 * The constructor of the overall model. Set the default values here
 	 */
