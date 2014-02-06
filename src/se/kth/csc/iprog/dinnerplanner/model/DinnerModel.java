@@ -3,10 +3,15 @@ package se.kth.csc.iprog.dinnerplanner.model;
 import java.util.HashSet;
 import java.util.Set;
 
-public class DinnerModel implements IDinnerPlanner {
-	
+public class DinnerModel implements IDinnerModel {
+    private int numberOfGuests;
+    private Set<Dish> selectedDishes;
+    private Set<Ingredient> ingredients;
+    private float price;
+    private float totalPrice;
 
-	Set<Dish> dishes = new HashSet<Dish>();
+
+    Set<Dish> dishes = new HashSet<Dish>();
 	
 	/**
 	 * TODO: For Lab2 you need to implement the IDinnerModel interface.
@@ -93,7 +98,45 @@ public class DinnerModel implements IDinnerPlanner {
 		}
 		return result;
 	}
-	
-	
 
+
+    @Override
+    public int getNumberOfGuests() {
+        return this.numberOfGuests;
+    }
+
+    @Override
+    public void setNumberOfGuests(int numberOfGuests) {
+        this.numberOfGuests = numberOfGuests;
+    }
+
+    /**you don't need a Dish type variable, but the method getSelectedDish(type)
+    should go through all the dishes in the "selectedDishes" (see previous point)
+    and find the one of the provided type**/
+    public Dish getSelectedDish(int type) {
+        Set<Dish> result2 = new HashSet<Dish>();
+        for (Dish d : selectedDishes){
+            if(d.getType() == type){
+               result2.add(d);
+            }
+        }
+        return (Dish) result2; /**KORREKT?**/
+    }
+
+    @Override
+    public Set<Dish> getFullMenu() {
+        return this.selectedDishes;
+    }
+
+    /**you don't need ingredients variable, but the method should go through all the
+    selectedDishes (each dish has a method getIngredients()) and get their ingredients
+    and collect them in one list and return that one list**/
+    public Set<Ingredient> getAllIngredients() {
+
+    }
+
+    @Override
+    public float getTotalMenuPrice() {
+        return 0;
+    }
 }
