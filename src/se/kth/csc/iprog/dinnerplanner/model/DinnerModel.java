@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class DinnerModel implements IDinnerModel { /****/
     private int numberOfGuests=0;
-    private Set<Dish> selectedDishes;
+    private Set<Dish> selectedDishes = new HashSet<Dish>();
     private Set<Ingredient> ingredients;
     private float totalPrice;
 
@@ -136,16 +136,26 @@ public class DinnerModel implements IDinnerModel { /****/
     and collect them in one list and return that one list**/
     public Set<Ingredient> getAllIngredients() {
         Set<Ingredient> result3 = new HashSet<Ingredient>();
+
         for (Dish d : selectedDishes){
-            for (Ingredient i : d.getIngredients()){
+            Set<Ingredient> dishIngredients = d.getIngredients();
+            for (Ingredient i : dishIngredients){
                 result3.add(i);
             }
+
         }
-        if (result3==null){
-            Ingredient dish1ing2 = new Ingredient("milk",30,"ml",6);
-            result3.add(dish1ing2);
+        if (selectedDishes.isEmpty()){
+            Ingredient dish2ing9 = new Ingredient("milk",20,"ml",4);
+            result3.add(dish2ing9);
+            Ingredient dish2ing10 = new Ingredient("beef",20,"ml",4);
+            result3.add(dish2ing10);
         }
-        return (Set<Ingredient>) result3; /**KORREKT?**/
+        else {
+            Ingredient dish2ing9 = new Ingredient("beef",20,"ml",4);
+            result3.add(dish2ing9);
+        }
+
+        return result3; /**KORREKT?**/
     }
 
 /**the same is true for the total price, you first iterate over all the

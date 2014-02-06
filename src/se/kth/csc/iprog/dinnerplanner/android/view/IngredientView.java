@@ -7,11 +7,15 @@ import se.kth.csc.iprog.dinnerplanner.model.Ingredient;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Set;
+import java.util.HashSet;
+
 public class IngredientView {
 
     DinnerModel dynamicDish = new DinnerModel();
     View view;
-    String string;
+    String string = "";
+
 
     public IngredientView(View view) {
 
@@ -26,9 +30,17 @@ public class IngredientView {
 
         TextView ingredientlist = (TextView) view.findViewById(R.id.ingredient_list);
 
-        for (Ingredient i : dynamicDish.getAllIngredients()) {
-            string = string + i.getName() + "   " + i.getQuantity() + " " + i.getUnit() + "\n";
+
+        Set<Ingredient> resultsBack = new HashSet<Ingredient>();
+        resultsBack = dynamicDish.getAllIngredients();
+
+        if (resultsBack.isEmpty()){
+            string = "it is empty yeah";
         }
+       for (Ingredient i : resultsBack) {
+           string = string + i.getName() + "        " + i.getQuantity() + " " + i.getUnit() + "\n";
+        }
+
 
         ingredientlist.setText(string);
 
