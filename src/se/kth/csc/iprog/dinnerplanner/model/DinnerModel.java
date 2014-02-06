@@ -141,6 +141,10 @@ public class DinnerModel implements IDinnerModel { /****/
                 result3.add(i);
             }
         }
+        if (result3==null){
+            Ingredient dish1ing2 = new Ingredient("milk",30,"ml",6);
+            result3.add(dish1ing2);
+        }
         return (Set<Ingredient>) result3; /**KORREKT?**/
     }
 

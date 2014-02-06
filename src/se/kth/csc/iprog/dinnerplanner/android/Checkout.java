@@ -1,6 +1,7 @@
 package se.kth.csc.iprog.dinnerplanner.android;
 
 import se.kth.csc.iprog.dinnerplanner.android.view.ExampleView;
+import se.kth.csc.iprog.dinnerplanner.android.view.IngredientView;
 import se.kth.csc.iprog.dinnerplanner.android.view.NumberOfGuests;
 import se.kth.csc.iprog.dinnerplanner.android.view.TotalCost;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
@@ -20,7 +21,7 @@ public class Checkout extends Activity {
 
         // Creating the view class instance
         TotalCost mainView = new TotalCost(findViewById(R.id.total_cost));
-        NumberOfGuests nrguests = new NumberOfGuests(findViewById(R.id.number_of_guests_view));
+        IngredientView ingview = new IngredientView(findViewById(R.id.ingredient_view));
 
 
 
