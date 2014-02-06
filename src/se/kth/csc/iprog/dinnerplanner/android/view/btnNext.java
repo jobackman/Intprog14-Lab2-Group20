@@ -10,7 +10,7 @@ public class btnNext {
 
     View view;
 
-    public btnNext(Button button) {
+    public btnNext(View view) {
 
         // store in the class the reference to the Android View
         this.view = view;

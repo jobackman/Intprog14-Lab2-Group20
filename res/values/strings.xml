@@ -6,5 +6,5 @@
     <string name="start">Start</string>
     <string name="create">Create</string>
     <string name="choose">Choose</string>
-
+    <string name="welcome">Welcome to Dinner Planner!</string>
 </resources>
