@@ -7,7 +7,6 @@ public class DinnerModel implements IDinnerModel { /****/
     private int numberOfGuests;
     private Set<Dish> selectedDishes;
     private Set<Ingredient> ingredients;
-    private float price;
     private float totalPrice;
 
 
@@ -117,9 +116,11 @@ public class DinnerModel implements IDinnerModel { /****/
         Set<Dish> result2 = new HashSet<Dish>();
         for (Dish d : selectedDishes){
             if(d.getType() == type){
+               /**return d;**/
                result2.add(d);
             }
         }
+        /**return null;**/
         return (Dish) result2; /**KORREKT?**/
     }
 
@@ -132,11 +133,26 @@ public class DinnerModel implements IDinnerModel { /****/
     selectedDishes (each dish has a method getIngredients()) and get their ingredients
     and collect them in one list and return that one list**/
     public Set<Ingredient> getAllIngredients() {
-        return null;
+        Set<Ingredient> result3 = new HashSet<Ingredient>();
+        for (Dish d : selectedDishes){
+            for (Ingredient i : d.getIngredients()){
+                result3.add(i);
+            }
+        }
+        return (Set<Ingredient>) result3; /**KORREKT?**/
     }
 
+/**the same is true for the total price, you first iterate over all the
+    ingredients (that you can get with previous method) and then you sum their price.
+    the sum of all the prices of all ingredients you then multiply by number of guest**/
     @Override
     public float getTotalMenuPrice() {
-        return 0;
+
+        for (Dish d : selectedDishes){
+            for (Ingredient i : d.getIngredients()){
+              totalPrice = totalPrice + (float) i.getPrice()*numberOfGuests;
+            }
+        }
+        return totalPrice;
     }
 }
