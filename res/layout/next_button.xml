@@ -3,15 +3,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:gravity="fill_vertical">
+    android:gravity="fill_vertical"
+    android:id="@+id/next_button" >
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-=======
-        android:text="Next"
->>>>>>> b6d2662da6c127c563e4b85725b9d65053193697
-        android:id="@+id/nextButton"
+        android:id="@+id/next_Button"
         android:layout_gravity="center_horizontal|bottom" />
 </LinearLayout>

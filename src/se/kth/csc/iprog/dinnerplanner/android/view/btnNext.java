@@ -9,15 +9,17 @@ import android.widget.TextView;
 public class btnNext {
 
     View view;
+    public Button nextButton;
 
     public btnNext(View view) {
 
         // store in the class the reference to the Android View
         this.view = view;
 
-        Button nextButton = (Button) view.findViewById(R.id.nextButton);
+        nextButton = (Button) view.findViewById(R.id.next_Button);
         nextButton.setText("TESTTEST");
 
     }
+
 
 }

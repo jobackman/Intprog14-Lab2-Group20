@@ -3,7 +3,7 @@ package se.kth.csc.iprog.dinnerplanner.model;
 import java.util.HashSet;
 import java.util.Set;
 
-public class DinnerModel implements IDinnerModel {
+public class DinnerModel implements IDinnerModel { /****/
     private int numberOfGuests;
     private Set<Dish> selectedDishes;
     private Set<Ingredient> ingredients;
@@ -132,7 +132,7 @@ public class DinnerModel implements IDinnerModel {
     selectedDishes (each dish has a method getIngredients()) and get their ingredients
     and collect them in one list and return that one list**/
     public Set<Ingredient> getAllIngredients() {
-
+        return null;
     }
 
     @Override
