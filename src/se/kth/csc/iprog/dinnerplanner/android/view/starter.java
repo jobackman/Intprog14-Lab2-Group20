@@ -7,12 +7,14 @@ import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
  */
 public class starter {
 
-    DinnerModel dynamicStarters = new Dinnermodel();
+    DinnerModel dynamicStarters = new DinnerModel();
     View view;
 
 
     public starter(View view){
+
         this.view = view;
+
 
 
     }
