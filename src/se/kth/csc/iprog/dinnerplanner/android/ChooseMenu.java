@@ -1,6 +1,7 @@
 package se.kth.csc.iprog.dinnerplanner.android;
 
 import se.kth.csc.iprog.dinnerplanner.android.view.ExampleView;
+import se.kth.csc.iprog.dinnerplanner.android.view.MainCourse;
 import se.kth.csc.iprog.dinnerplanner.android.view.btnNext;
 import se.kth.csc.iprog.dinnerplanner.android.view.participants;
 import se.kth.csc.iprog.dinnerplanner.android.view.TotalCost;
@@ -21,18 +22,19 @@ public class ChooseMenu extends Activity {
         setContentView(R.layout.activity_choose);
 
         // Creating the view class instance
-       /** ExampleView mainView = new ExampleView(findViewById(R.id.this_is_example_view_id));**/
 
         participants participantView = new participants(findViewById(R.id.participantsLayout));
 
         TotalCost costView = new TotalCost(findViewById(R.id.total_cost));
 
-        //Starter menu ### WIP ###
+        //Starter menu KLAR
         starter startermenu = new starter(findViewById(R.id.starter));
 
         //Main menu TBD
+        MainCourse main = new MainCourse(findViewById(R.id.MainCourse));
 
         //Dessert TBD
+        //Dessert dess = new Dessert(findViewById(R.id.Dessert);
 
         //Next button
         btnNext next = new btnNext(findViewById(R.id.next_button));

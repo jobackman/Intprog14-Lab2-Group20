@@ -27,6 +27,11 @@
         layout="@layout/starter_view" />
 
     <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/maincourse_view" />
+
+    <include
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         layout="@layout/next_button"
