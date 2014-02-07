@@ -8,6 +8,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/choosemenu"
+        android:id="@+id/menuHeader" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/starter"
         android:id="@+id/starterHeader" />
@@ -25,4 +32,5 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/starterImg" />
     </LinearLayout>
+
 </LinearLayout>

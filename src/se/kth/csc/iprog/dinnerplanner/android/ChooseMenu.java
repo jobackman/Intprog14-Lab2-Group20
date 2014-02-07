@@ -27,12 +27,12 @@ public class ChooseMenu extends Activity {
 
         TotalCost costView = new TotalCost(findViewById(R.id.total_cost));
 
-        //Starter menu
+        //Starter menu ### WIP ###
         starter startermenu = new starter(findViewById(R.id.starter));
 
-        //Main menu
+        //Main menu TBD
 
-        //Dessert
+        //Dessert TBD
 
         //Next button
         btnNext next = new btnNext(findViewById(R.id.next_button));
