@@ -19,7 +19,6 @@ public class starter {
     DinnerModel dynamicStarters = new DinnerModel();
     View view;
     Set<Dish> starters = new HashSet<Dish>();
-    public ImageView img;
     public TextView txt;
 
     public starter(View view){
@@ -28,10 +27,9 @@ public class starter {
         LinearLayout starterList = (LinearLayout) view.findViewById(R.id.starterLayout);
 
         starters = dynamicStarters.getDishesOfType(1);
-        /**img = (ImageView) view.findViewById(R.id.starterImage);**/
         txt = (TextView) view.findViewById(R.id.starterImg);
+
         for(Dish s: starters){
-            /**img.setImageResource(R.drawable.);**/
             txt.setText(s.getImage());
         }
 

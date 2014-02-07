@@ -26,4 +26,11 @@
         android:layout_height="wrap_content"
         layout="@layout/starter_view" />
 
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/next_button"
+        android:layout_alignParentEnd="true" />
+
+
 </LinearLayout>

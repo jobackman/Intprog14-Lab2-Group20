@@ -10,4 +10,5 @@
     <string name="starter">Starter</string>
     <string name="main">Main</string>
     <string name="dessert">Dessert</string>
+    <string name="choosemenu">Choose Menu</string>
 </resources>
