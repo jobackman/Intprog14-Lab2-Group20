@@ -16,12 +16,12 @@ public class ChooseMenu extends Activity {
 
         // Set the view for the main activity screen
         // it must come before any call to findViewById method
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_choose);
 
         // Creating the view class instance
-        ExampleView mainView = new ExampleView(findViewById(R.id.this_is_example_view_id));
+       /** ExampleView mainView = new ExampleView(findViewById(R.id.this_is_example_view_id));**/
 
-        participants participantView = new participants(findViewById(R.id.participantsText));
+        participants participantView = new participants(findViewById(R.id.participantsLayout));
 
         TotalCost costView = new TotalCost(findViewById(R.id.total_cost));
 
