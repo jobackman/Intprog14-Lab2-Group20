@@ -28,6 +28,7 @@
 
     <TextView
         android:id="@+id/show_course_description"
+        android:textSize="100pt"
         android:layout_width="220dp"
         android:layout_height="200dp"
         android:layout_gravity="left"

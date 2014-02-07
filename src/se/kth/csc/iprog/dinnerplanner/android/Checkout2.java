@@ -1,5 +1,6 @@
 package se.kth.csc.iprog.dinnerplanner.android;
 
+import se.kth.csc.iprog.dinnerplanner.android.view.BackButtonView;
 import se.kth.csc.iprog.dinnerplanner.android.view.CourseDescriptionView;
 import se.kth.csc.iprog.dinnerplanner.android.view.IngredientView;
 import se.kth.csc.iprog.dinnerplanner.android.view.TotalCost;
@@ -20,7 +21,7 @@ public class Checkout2 extends Activity {
 
         // Creating the view class instance
         CourseDescriptionView courseview = new CourseDescriptionView(findViewById(R.id.course_description_view));
-
+        BackButtonView backview = new BackButtonView(findViewById(R.id.back_button));
 
 
 
