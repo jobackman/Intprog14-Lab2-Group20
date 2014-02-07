@@ -10,6 +10,7 @@
         android:id="@+id/display_total_cost"
         android:layout_width="129dp"
         android:layout_height="50dp"
+        android:textSize="12pt"
         android:layout_gravity="right" />
 
 </LinearLayout>
