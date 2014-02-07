@@ -7,12 +7,6 @@
     <include
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        layout="@layout/total_cost_view" />
-
-    <include
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    layout="@layout/ingredients_view" />
-
+        layout="@layout/course_description_view" />
 
 </LinearLayout>
