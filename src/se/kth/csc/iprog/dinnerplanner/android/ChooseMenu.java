@@ -3,6 +3,7 @@ package se.kth.csc.iprog.dinnerplanner.android;
 import se.kth.csc.iprog.dinnerplanner.android.view.ExampleView;
 import se.kth.csc.iprog.dinnerplanner.android.view.participants;
 import se.kth.csc.iprog.dinnerplanner.android.view.TotalCost;
+import se.kth.csc.iprog.dinnerplanner.android.view.starter;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import android.os.Bundle;
 import android.app.Activity;
@@ -24,6 +25,8 @@ public class ChooseMenu extends Activity {
         participants participantView = new participants(findViewById(R.id.participantsLayout));
 
         TotalCost costView = new TotalCost(findViewById(R.id.total_cost));
+
+        starter startermenu = new starter(findViewById(R.id.starter));
 
         /**nextButton.setOnClickListener(new View.OnClickListener() {
 
