@@ -11,5 +11,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/next_Button"
         android:layout_gravity="center_horizontal|bottom"
-        android:background="#800000" />
+        android:background="#800000"
+        android:textColor="#FFFFFF"/>
+
 </LinearLayout>
