@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
+        android:textStyle="bold"
         android:id="@+id/instructions"
         android:layout_gravity="right"
         android:layout_alignParentRight="true"
@@ -46,5 +47,21 @@
         android:layout_below="@+id/instructions"
         android:layout_toRightOf="@+id/desertLayout" />
 
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/smallImg2"
+        android:layout_alignTop="@+id/smallImg"
+        android:src="@drawable/icecream"
+        android:layout_toLeftOf="@+id/instructions" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/smallImg3"
+        android:background="#FF0000"
+        android:layout_alignTop="@+id/smallImg2"
+        android:layout_alignRight="@+id/instructions"
+        android:layout_alignEnd="@+id/instructions" />
 
 </RelativeLayout>
