@@ -26,11 +26,19 @@
         android:id="@+id/starterLayout"
         android:focusable="false">
 
-        <TextView
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/starterImg" />
+            android:id="@+id/starterImg"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
+
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/starterImgName" />
 
 </LinearLayout>

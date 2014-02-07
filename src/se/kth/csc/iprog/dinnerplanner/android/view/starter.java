@@ -1,5 +1,6 @@
 package se.kth.csc.iprog.dinnerplanner.android.view;
 
+import android.app.Activity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -18,28 +19,44 @@ public class starter {
 
     DinnerModel dynamicStarters = new DinnerModel();
     View view;
+
+    String imgFileName;
+
     Set<Dish> starters = new HashSet<Dish>();
-    public TextView txt;
+    public TextView imgName;
+    public ImageView image;
 
     public starter(View view){
 
         this.view = view;
-        LinearLayout starterList = (LinearLayout) view.findViewById(R.id.starterLayout);
 
+        //Hämta alla starters
         starters = dynamicStarters.getDishesOfType(1);
-        txt = (TextView) view.findViewById(R.id.starterImg);
+        imgName = (TextView) view.findViewById(R.id.starterImgName);
+
+
 
         for(Dish s: starters){
-            txt.setText(s.getImage());
+            //Sätt namnet på maten under
+            imgName.setText(s.getName());
+            //Hämta bildens filnamn
+            imgFileName = s.getImage();
+        }
+
+        if (imgFileName.indexOf(".") > 0){
+            //Ta bort .jpg
+            imgFileName = imgFileName.substring(0, imgFileName.lastIndexOf("."));
         }
 
 
 
+        /** THIS IS HOW WE DO WHEN WE DO THE IMAGE DONE!**/
+        image = (ImageView) view.findViewById(R.id.starterImg);
+        int resID = view.getResources().getIdentifier(imgFileName , "drawable", ((Activity)view.getContext()).getPackageName());
 
-       /**
-        participantsView = (TextView) view.findViewById(R.id.participantsText);
-        participantsView.setText("Participants: ");
-        **/
+        image.setImageResource(resID);
+
+
 
     }
 }
