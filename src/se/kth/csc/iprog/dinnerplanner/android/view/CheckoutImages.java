@@ -44,7 +44,7 @@ public class CheckoutImages {
         test.setText("Instructrions");
 
         TextView dname = (TextView) view.findViewById(R.id.dishName);
-        test.setText(dishName);
+        dname.setText(dishName);
 
 
 
