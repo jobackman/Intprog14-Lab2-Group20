@@ -7,16 +7,44 @@
     android:id="@+id/image_view">
 
     <TextView
-        android:layout_width="400dp"
+        android:layout_width="100dp"
         android:layout_height="30dp"
-        android:layout_marginTop="60dp"
         android:id="@+id/instructions"
+        android:layout_weight="0.20"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="80dp"
+        android:id="@+id/image_View_instruction"
         android:layout_weight="0.20" />
 
     <ImageView
-        android:layout_width="400dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginTop="80dp"
-        android:id="@+id/image_View"
+        android:layout_marginLeft="100dp"
+        android:id="@+id/image_View_starter"
         android:layout_weight="0.20" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="180dp"
+        android:id="@+id/image_View_main"
+        android:layout_weight="0.20" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="260dp"
+        android:id="@+id/image_View_desert"
+        android:layout_weight="0.20" />
+
 </RelativeLayout>

@@ -45,9 +45,8 @@ public class CheckoutImages {
 
 
         /** THIS IS HOW WE DO WHEN WE DO THE IMAGE DONE!**/
-        ImageView image = (ImageView) view.findViewById(R.id.image_View);
+        ImageView image = (ImageView) view.findViewById(R.id.image_View_instruction);
         int resID = view.getResources().getIdentifier(imageString , "drawable", ((Activity)view.getContext()).getPackageName());
-
         image.setImageResource(resID);
 
         // Setup the rest of the view layout
