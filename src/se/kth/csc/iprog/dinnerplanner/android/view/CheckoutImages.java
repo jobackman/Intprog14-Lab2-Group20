@@ -21,7 +21,7 @@ public class CheckoutImages {
     DinnerModel dynamicImage = new DinnerModel();
     View view;
     String imageString;
-
+    String dishName;
 
     public CheckoutImages(View view) {
 
@@ -33,6 +33,7 @@ public class CheckoutImages {
 
         for (Dish d : result2) {
             imageString = d.getImage();
+            dishName = d.getName();
 
         }
 
@@ -41,6 +42,9 @@ public class CheckoutImages {
         }
         TextView test = (TextView) view.findViewById(R.id.instructions);
         test.setText("Instructrions");
+
+        TextView dname = (TextView) view.findViewById(R.id.dishName);
+        test.setText(dishName);
 
 
 

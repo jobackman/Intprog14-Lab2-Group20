@@ -64,4 +64,14 @@
         android:layout_alignRight="@+id/instructions"
         android:layout_alignEnd="@+id/instructions" />
 
+    <TextView
+        android:id="@+id/dishName"
+        android:layout_width="220dp"
+        android:layout_height="200dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="255dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
