@@ -4,11 +4,12 @@
     android:orientation="vertical" android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:gravity="fill_vertical"
-    android:id="@+id/next_button" >
+    android:id="@+id/next_button">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/next_Button"
-        android:layout_gravity="center_horizontal|bottom" />
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="#800000" />
 </LinearLayout>
