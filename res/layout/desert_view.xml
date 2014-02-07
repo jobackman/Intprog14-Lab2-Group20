@@ -3,28 +3,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/MainCourse">
+    android:id="@+id/desert">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/maincourse"
-        android:id="@+id/mainCourseHeader" />
+        android:text="Desert"
+        android:id="@+id/desertHeader" />
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/mainCourseLayout"
+        android:id="@+id/desertLayout"
         android:focusable="false">
 
-        <ImageView
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:id="@+id/mainCourseImg"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:id="@+id/desertImg"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
@@ -32,6 +40,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:id="@+id/mainCourseImgName" />
+        android:id="@+id/desertImgName" />
 
 </LinearLayout>

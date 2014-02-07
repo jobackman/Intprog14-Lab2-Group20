@@ -40,12 +40,12 @@ public class CheckoutImages {
             imageString = imageString.substring(0, imageString.lastIndexOf("."));
         }
         TextView test = (TextView) view.findViewById(R.id.instructions);
-        test.setText(imageString);
+        test.setText("Instructrions");
 
 
 
         /** THIS IS HOW WE DO WHEN WE DO THE IMAGE DONE!**/
-        ImageView image = (ImageView) view.findViewById(R.id.image_View_instruction);
+        ImageView image = (ImageView) view.findViewById(R.id.smallImg);
         int resID = view.getResources().getIdentifier(imageString , "drawable", ((Activity)view.getContext()).getPackageName());
         image.setImageResource(resID);
 

@@ -1,5 +1,6 @@
 package se.kth.csc.iprog.dinnerplanner.android;
 
+import se.kth.csc.iprog.dinnerplanner.android.view.Desert;
 import se.kth.csc.iprog.dinnerplanner.android.view.ExampleView;
 import se.kth.csc.iprog.dinnerplanner.android.view.MainCourse;
 import se.kth.csc.iprog.dinnerplanner.android.view.btnNext;
@@ -34,7 +35,7 @@ public class ChooseMenu extends Activity {
         MainCourse main = new MainCourse(findViewById(R.id.MainCourse));
 
         //Dessert TBD
-        //Dessert dess = new Dessert(findViewById(R.id.Dessert);
+        Desert dess = new Desert(findViewById(R.id.desert));
 
         //Next button
         btnNext next = new btnNext(findViewById(R.id.next_button));

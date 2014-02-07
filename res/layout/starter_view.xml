@@ -44,7 +44,7 @@
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:id="@+id/imageView"
-            android:src="@drawable/icecream"
+            android:src="@drawable/bakedbrie"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp" />
 
