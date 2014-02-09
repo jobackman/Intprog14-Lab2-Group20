@@ -12,9 +12,7 @@ import se.kth.csc.iprog.dinnerplanner.android.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import se.kth.csc.iprog.dinnerplanner.model.Dish;
 
-/**
- * Created by Johan on 2014-02-06.
- */
+
 public class MainCourse {
 
     DinnerModel dynamicStarters = new DinnerModel();
@@ -30,27 +28,27 @@ public class MainCourse {
 
         this.view = view;
 
-        //Hämta alla main courses
+        //get all main courses
         mainCourses = dynamicStarters.getDishesOfType(2);
         imgName = (TextView) view.findViewById(R.id.mainCourseImgName);
 
 
 
-        for(Dish s: mainCourses){
-            //Sätt namnet på maten under
+        for(Dish s: mainCourses){/** TODO: choose the correct image according to the image ID! **/
+            //get the name
             imgName.setText(s.getName());
-            //Hämta bildens filnamn
+            //get the image
             imgFileName = s.getImage();
         }
 
         if (imgFileName.indexOf(".") > 0){
-            //Ta bort .jpg
+            //delete .jpg
             imgFileName = imgFileName.substring(0, imgFileName.lastIndexOf("."));
         }
 
 
 
-        /** THIS IS HOW WE DO WHEN WE DO THE IMAGE DONE!**/
+        /** IMAGE AS DRAWABLE! **/
         image = (ImageView) view.findViewById(R.id.mainCourseImg);
         int resID = view.getResources().getIdentifier(imgFileName , "drawable", ((Activity)view.getContext()).getPackageName());
 

@@ -12,9 +12,7 @@ import se.kth.csc.iprog.dinnerplanner.android.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import se.kth.csc.iprog.dinnerplanner.model.Dish;
 
-/**
- * Created by Johan on 2014-02-06.
- */
+
 public class Desert {
 
     DinnerModel dynamicDeserts = new DinnerModel();
@@ -30,19 +28,19 @@ public class Desert {
 
         this.view = view;
 
-        //Hamta alla starters
-        deserts = dynamicDeserts.getDishesOfType(3);
+        //get all deserts
+        deserts = dynamicDeserts.getDishesOfType(3); //This will be empty for now...
         imgName = (TextView) view.findViewById(R.id.desertImgName);
         if (deserts.isEmpty()){
             imgFileName = "icecream.jpg";
             imgName.setText("Ice cream");
         }
 
-        else {
+        else {  /** TODO: choose the correct image according to the image ID! **/
             for(Dish s: deserts){
-                //Satt namnet på maten under
+                //get the name
                 imgName.setText(s.getName());
-                //Hamta bildens filnamn
+                //get the image
                 /*imgFileName = s.getImage(); CHANGE BACK LATER!!!!!!!!!!*/
                 imgFileName = "toast.jpg";
             }
@@ -50,13 +48,13 @@ public class Desert {
         }
 
         if (imgFileName.indexOf(".") > 0){
-            //Ta bort .jpg
+            //delete .jpg
             imgFileName = imgFileName.substring(0, imgFileName.lastIndexOf("."));
         }
 
 
 
-        /** THIS IS HOW WE DO WHEN WE DO THE IMAGE DONE!**/
+        /** IMAGE AS DRAWABLE! **/
         image = (ImageView) view.findViewById(R.id.desertImg);
         int resID = view.getResources().getIdentifier(imgFileName , "drawable", ((Activity)view.getContext()).getPackageName());
 
