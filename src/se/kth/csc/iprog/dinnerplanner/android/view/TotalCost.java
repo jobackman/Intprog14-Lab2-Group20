@@ -7,16 +7,25 @@ import android.widget.TextView;
 
 public class TotalCost {
 
-    DinnerModel dynamicPrice = new DinnerModel();
+    /**
+     Things I added:
+     DinnerModel model;
+     public TotalCost(View view, DinnerModel model)
+     this.model = model;
+     totalcost.setText("Total cost " + model.getTotalMenuPrice() + " kr");
+     **/
+    //DinnerModel dynamicPrice = new DinnerModel();
     View view;
-
-    public TotalCost(View view) {
+    DinnerModel model;
+    public TotalCost(View view, DinnerModel model) {
 
         // store in the class the reference to the Android View
         this.view = view;
-
+        this.model = model;
         TextView totalcost = (TextView) view.findViewById(R.id.display_total_cost);
-        totalcost.setText("Total cost " + dynamicPrice.getTotalMenuPrice() + " kr");
+        //totalcost.setText("Total cost " + dynamicPrice.getTotalMenuPrice() + " kr");
+        totalcost.setText("Total cost " + model.getTotalMenuPrice() + " kr");
+
 
 
         // Setup the rest of the view layout

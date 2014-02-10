@@ -12,7 +12,8 @@ import android.os.Bundle;
 import android.app.Activity;
 
 public class ChooseMenu extends Activity {
-
+    // INSTANTIATE THE MODEL HERE !!!!!!!!!
+    DinnerModel model = ((DinnerPlannerApplication) this.getApplication()).getModel();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Default call to load previous state
@@ -26,7 +27,8 @@ public class ChooseMenu extends Activity {
 
         participants participantView = new participants(findViewById(R.id.participantsLayout));
 
-        TotalCost costView = new TotalCost(findViewById(R.id.total_cost));
+        // PASS THE MODEL AS A VARIABLE
+        TotalCost costView = new TotalCost(findViewById(R.id.total_cost), model);
 
         //Starter menu KLAR
         starter startermenu = new starter(findViewById(R.id.starter));

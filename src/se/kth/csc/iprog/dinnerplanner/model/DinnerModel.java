@@ -129,14 +129,14 @@ public class DinnerModel implements IDinnerModel { /****/
     @Override
     public Set<Dish> getFullMenu() {
 
-        if (selectedDishes.isEmpty()){
+        /**if (selectedDishes.isEmpty()){
             Dish dish1 = new Dish("French toast",Dish.STARTER,"toast.jpg","In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.");
             selectedDishes.add(dish1);
             Dish dish2 = new Dish("Meat balls",Dish.MAIN,"meatballs.jpg","Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.");
             selectedDishes.add(dish2);
             Dish dish3 = new Dish("Ice cream",Dish.DESERT,"icecream.jpg","Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.");
             selectedDishes.add(dish3);
-        }
+        }**/
         return this.selectedDishes;
 
     }
@@ -154,16 +154,15 @@ public class DinnerModel implements IDinnerModel { /****/
             }
 
         }
-        if (selectedDishes.isEmpty()){
+        /**if (selectedDishes.isEmpty()){
             Ingredient dish2ing9 = new Ingredient("milk",20,"ml",4);
             result3.add(dish2ing9);
             Ingredient dish2ing10 = new Ingredient("beef",20,"ml",4);
             result3.add(dish2ing10);
-        }
-        else {
-            Ingredient dish2ing9 = new Ingredient("beef",20,"ml",4);
-            result3.add(dish2ing9);
-        }
+        }**/
+
+
+
 
         return result3; /**KORREKT?**/
     }
@@ -174,16 +173,16 @@ public class DinnerModel implements IDinnerModel { /****/
     @Override
     public float getTotalMenuPrice() {
 
-        if (selectedDishes.isEmpty()){
+        /**if (selectedDishes.isEmpty()){
             totalPrice = 1337;
-        }
-        else {
+        }**/
+
             for (Dish d : selectedDishes){
                 for (Ingredient i : d.getIngredients()){
                 totalPrice = totalPrice + (float) i.getPrice()*numberOfGuests;
                 }
             }
-        }
+
         return totalPrice;
     }
 
