@@ -13,15 +13,15 @@
         android:layout_height="wrap_content"
         layout="@layout/back_button" />
 
-    <include
+     <include
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        layout="@layout/checkout_images" />
+        layout="@layout/total_cost_view" />
 
     <include
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        layout="@layout/total_cost_view" />
+        layout="@layout/checkout_images" />
 
     <include
     android:layout_width="match_parent"

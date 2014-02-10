@@ -16,7 +16,7 @@ public class TotalCost {
         this.view = view;
 
         TextView totalcost = (TextView) view.findViewById(R.id.display_total_cost);
-        totalcost.setText("Total cost " + dynamicPrice.getTotalMenuPrice());
+        totalcost.setText("Total cost " + dynamicPrice.getTotalMenuPrice() + " kr");
 
 
         // Setup the rest of the view layout
