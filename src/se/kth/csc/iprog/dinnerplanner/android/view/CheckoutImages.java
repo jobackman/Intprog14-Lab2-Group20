@@ -18,18 +18,19 @@ import java.util.HashSet;
 
 public class CheckoutImages {
 
-    DinnerModel dynamicImage = new DinnerModel();
     View view;
+    DinnerModel model;
     String imageString;
     String dishName;
 
-    public CheckoutImages(View view) {
+    public CheckoutImages(View view, DinnerModel model) {
 
         // store in the class the reference to the Android View
         this.view = view;
+        this.model = model;
 
         Set<Dish> result2 = new HashSet<Dish>();
-        result2 = dynamicImage.getFullMenu();
+        result2 = model.getFullMenu();
 
         for (Dish d : result2) {
             imageString = d.getImage();

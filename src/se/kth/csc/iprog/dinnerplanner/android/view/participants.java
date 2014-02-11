@@ -10,8 +10,8 @@ public class participants {
 
         View view;
         public TextView participantsView;
-
-        public participants(View view) {
+        DinnerModel model;
+        public participants(View view, DinnerModel model) {
 
             // store in the class the reference to the Android View
             this.view = view;

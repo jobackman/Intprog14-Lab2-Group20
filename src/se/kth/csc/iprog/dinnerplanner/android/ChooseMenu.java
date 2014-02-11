@@ -25,22 +25,22 @@ public class ChooseMenu extends Activity {
 
         // Creating the view class instance
 
-        participants participantView = new participants(findViewById(R.id.participantsLayout));
+        participants participantView = new participants(findViewById(R.id.participantsLayout), model);
 
         // PASS THE MODEL AS A VARIABLE
         TotalCost costView = new TotalCost(findViewById(R.id.total_cost), model);
 
         //Starter menu KLAR
-        starter startermenu = new starter(findViewById(R.id.starter));
+        starter startermenu = new starter(findViewById(R.id.starter), model);
 
         //Main menu TBD
-        MainCourse main = new MainCourse(findViewById(R.id.MainCourse));
+        MainCourse main = new MainCourse(findViewById(R.id.MainCourse), model);
 
         //Dessert TBD
-        Desert dess = new Desert(findViewById(R.id.desert));
+        Desert dess = new Desert(findViewById(R.id.desert), model);
 
         //Next button
-        btnNext next = new btnNext(findViewById(R.id.next_button));
+        btnNext next = new btnNext(findViewById(R.id.next_button), model);
 
         /**nextButton.setOnClickListener(new View.OnClickListener() {
 

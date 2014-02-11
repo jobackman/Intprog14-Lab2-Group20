@@ -15,21 +15,30 @@ import se.kth.csc.iprog.dinnerplanner.model.Dish;
 
 public class Desert {
 
-    DinnerModel dynamicDeserts = new DinnerModel();
     View view;
-
+    DinnerModel model;
     String imgFileName;
+    Set<Dish> getDishes = new HashSet<Dish>();
 
     Set<Dish> deserts = new HashSet<Dish>();
     public TextView imgName;
     public ImageView image;
 
-    public Desert(View view){
+    public Desert(View view, DinnerModel model){
 
         this.view = view;
+        this.model = model;
+        getDishes = model.getDishes();
+
 
         //get all deserts
-        deserts = dynamicDeserts.getDishesOfType(3); //This will be empty for now...
+        getDishes = model.getDishes();
+        for (Dish d : getDishes){
+            if (d.getType()==3){
+                deserts.add(d);
+            }
+        }
+
         imgName = (TextView) view.findViewById(R.id.desertImgName);
         if (deserts.isEmpty()){
             imgFileName = "icecream.jpg";
@@ -41,8 +50,11 @@ public class Desert {
                 //get the name
                 imgName.setText(s.getName());
                 //get the image
-                /*imgFileName = s.getImage(); CHANGE BACK LATER!!!!!!!!!!*/
-                imgFileName = "toast.jpg";
+                imgFileName = s.getImage();
+
+                if (imgFileName.equals("")){
+                    imgFileName = "toast.jpg";
+                }
             }
 
         }

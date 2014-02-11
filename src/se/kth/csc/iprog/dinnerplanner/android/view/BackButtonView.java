@@ -9,13 +9,14 @@ import android.widget.TextView;
 public class BackButtonView {
 
     View view;
+    DinnerModel model;
     public Button backButton;
 
-    public BackButtonView(View view) {
+    public BackButtonView(View view, DinnerModel model) {
 
         // store in the class the reference to the Android View
         this.view = view;
-
+        this.model = model;
         backButton = (Button) view.findViewById(R.id.back_Button);
         backButton.setText("<---");
 

@@ -12,18 +12,18 @@ import java.util.HashSet;
 
 public class IngredientView {
 
-    DinnerModel dynamicDish = new DinnerModel();
     View view;
+    DinnerModel model;
     String string = "";
 
 
-    public IngredientView(View view) {
+    public IngredientView(View view, DinnerModel model) {
 
         // store in the class the reference to the Android View
         this.view = view;
-
+        this.model = model;
         TextView totalguests = (TextView) view.findViewById(R.id.show_number_of_guests);
-        totalguests.setText(dynamicDish.getNumberOfGuests() + " pers");
+        totalguests.setText(model.getNumberOfGuests() + " pers");
 
         TextView ingredientTitle = (TextView) view.findViewById(R.id.show_ingredient_title);
         ingredientTitle.setText("Ingredients");
@@ -32,10 +32,10 @@ public class IngredientView {
 
 
         Set<Ingredient> resultsBack = new HashSet<Ingredient>();
-        resultsBack = dynamicDish.getAllIngredients();
+        resultsBack = model.getAllIngredients();
 
         if (resultsBack.isEmpty()){
-            string = "it is empty yeah";
+            string = "it is empty...";
         }
        for (Ingredient i : resultsBack) {
            string = string + i.getName() + "        " + i.getQuantity() + " " + i.getUnit() + "\n";

@@ -15,21 +15,28 @@ import se.kth.csc.iprog.dinnerplanner.model.Dish;
 
 public class starter {
 
-    DinnerModel dynamicStarters = new DinnerModel();
     View view;
-
+    DinnerModel model;
     String imgFileName;
-
+    Set<Dish> getDishes = new HashSet<Dish>();
     Set<Dish> starters = new HashSet<Dish>();
+
     public TextView imgName;
     public ImageView image;
 
-    public starter(View view){
+    public starter(View view, DinnerModel model){
 
         this.view = view;
-
+        this.model = model;
         //Get all starters
-        starters = dynamicStarters.getDishesOfType(1);
+        getDishes = model.getDishes();
+        //starters = model.getDishesOfType(1);
+        for (Dish d : getDishes){
+            if (d.getType()==1){
+                starters.add(d);
+            }
+        }
+
         imgName = (TextView) view.findViewById(R.id.starterImgName);
 
 

@@ -15,21 +15,29 @@ import se.kth.csc.iprog.dinnerplanner.model.Dish;
 
 public class MainCourse {
 
-    DinnerModel dynamicStarters = new DinnerModel();
     View view;
-
+    DinnerModel model;
     String imgFileName;
 
+    Set<Dish> getDishes = new HashSet<Dish>();
     Set<Dish> mainCourses = new HashSet<Dish>();
     public TextView imgName;
     public ImageView image;
 
-    public MainCourse(View view){
+    public MainCourse(View view, DinnerModel model){
 
         this.view = view;
-
+        this.model = model;
         //get all main courses
-        mainCourses = dynamicStarters.getDishesOfType(2);
+        getDishes = model.getDishes();
+
+        getDishes = model.getDishes();
+        for (Dish d : getDishes){
+            if (d.getType()==2){
+                mainCourses.add(d);
+            }
+        }
+
         imgName = (TextView) view.findViewById(R.id.mainCourseImgName);
 
 

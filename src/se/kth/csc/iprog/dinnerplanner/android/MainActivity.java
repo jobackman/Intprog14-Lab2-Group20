@@ -11,6 +11,7 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
+    DinnerModel model = ((DinnerPlannerApplication) this.getApplication()).getModel();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +23,8 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         
     	// Creating the view class instance
-    	ExampleView mainView = new ExampleView(findViewById(R.id.this_is_example_view_id));
-        btnNext buttonView = new btnNext(findViewById(R.id.next_button));
+    	ExampleView mainView = new ExampleView(findViewById(R.id.this_is_example_view_id), model);
+        btnNext buttonView = new btnNext(findViewById(R.id.next_button), model);
 
         /**buttonView.nextButton.setOnClickListener(new View.OnClickListener() {
 

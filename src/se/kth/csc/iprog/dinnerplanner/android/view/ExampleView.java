@@ -8,12 +8,13 @@ import android.widget.TextView;
 public class ExampleView {
 
 	View view;
+    DinnerModel model;
 
-	public ExampleView(View view) {
+	public ExampleView(View view, DinnerModel model) {
 
 		// store in the class the reference to the Android View
 		this.view = view;
-
+        this.model = model;
 		TextView example = (TextView) view.findViewById(R.id.example_text);
 		example.setText("Weclome to Dinner Planner! ");
 

@@ -5,11 +5,13 @@ import se.kth.csc.iprog.dinnerplanner.android.view.CheckoutImages;
 import se.kth.csc.iprog.dinnerplanner.android.view.CourseDescriptionView;
 import se.kth.csc.iprog.dinnerplanner.android.view.IngredientView;
 import se.kth.csc.iprog.dinnerplanner.android.view.TotalCost;
+import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 
 import android.os.Bundle;
 import android.app.Activity;
 
 public class Checkout2 extends Activity {
+    DinnerModel model = ((DinnerPlannerApplication) this.getApplication()).getModel();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +24,9 @@ public class Checkout2 extends Activity {
 
         // Creating the view class instance
         CourseDescriptionView courseview = new CourseDescriptionView(findViewById(R.id.course_description_view));
-        BackButtonView backview = new BackButtonView(findViewById(R.id.back_button));
-        CheckoutImages images = new CheckoutImages(findViewById(R.id.image_view));
-        TotalCost mainView = new TotalCost(findViewById(R.id.total_cost));
+        BackButtonView backview = new BackButtonView(findViewById(R.id.back_button), model);
+        CheckoutImages images = new CheckoutImages(findViewById(R.id.image_view), model);
+        TotalCost mainView = new TotalCost(findViewById(R.id.total_cost), model);
 
 
 
