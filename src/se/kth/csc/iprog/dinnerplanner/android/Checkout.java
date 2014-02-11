@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.app.Activity;
 
 public class Checkout extends Activity {
-    DinnerModel model = ((DinnerPlannerApplication) this.getApplication()).getModel();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +19,7 @@ public class Checkout extends Activity {
         // Set the view for the main activity screen
         // it must come before any call to findViewById method
         setContentView(R.layout.activity_checkout);
+        DinnerModel model = ((DinnerPlannerApplication) this.getApplication()).getModel();
 
         // Creating the view class instance
         TotalCost mainView = new TotalCost(findViewById(R.id.total_cost), model);

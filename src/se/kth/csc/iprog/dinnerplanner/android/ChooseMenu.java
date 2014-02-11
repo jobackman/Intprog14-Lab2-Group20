@@ -13,16 +13,17 @@ import android.app.Activity;
 
 public class ChooseMenu extends Activity {
     // INSTANTIATE THE MODEL HERE !!!!!!!!!
-    DinnerModel model = ((DinnerPlannerApplication) this.getApplication()).getModel();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Default call to load previous state
         super.onCreate(savedInstanceState);
 
+
         // Set the view for the main activity screen
         // it must come before any call to findViewById method
         setContentView(R.layout.activity_choose);
 
+        DinnerModel model = ((DinnerPlannerApplication) this.getApplication()).getModel();
         // Creating the view class instance
 
         participants participantView = new participants(findViewById(R.id.participantsLayout), model);
@@ -40,7 +41,7 @@ public class ChooseMenu extends Activity {
         Desert dess = new Desert(findViewById(R.id.desert), model);
 
         //Next button
-        btnNext next = new btnNext(findViewById(R.id.next_button), model);
+        btnNext next = new btnNext(findViewById(R.id.next_button), model);//, model
 
         /**nextButton.setOnClickListener(new View.OnClickListener() {
 

@@ -11,19 +11,19 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
-    DinnerModel model = ((DinnerPlannerApplication) this.getApplication()).getModel();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Default call to load previous state
     	super.onCreate(savedInstanceState);
+        DinnerModel model = ((DinnerPlannerApplication) this.getApplication()).getModel();
     	
     	// Set the view for the main activity screen
     	// it must come before any call to findViewById method
         setContentView(R.layout.activity_main);
         
     	// Creating the view class instance
-    	ExampleView mainView = new ExampleView(findViewById(R.id.this_is_example_view_id), model);
+    	//ExampleView mainView = new ExampleView(findViewById(R.id.this_is_example_view_id), model);
         btnNext buttonView = new btnNext(findViewById(R.id.next_button), model);
 
         /**buttonView.nextButton.setOnClickListener(new View.OnClickListener() {
