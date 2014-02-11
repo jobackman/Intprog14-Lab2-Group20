@@ -2,6 +2,7 @@ package se.kth.csc.iprog.dinnerplanner.android.view;
 
 import se.kth.csc.iprog.dinnerplanner.android.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
+import se.kth.csc.iprog.dinnerplanner.model.Dish;
 import se.kth.csc.iprog.dinnerplanner.model.Ingredient;
 
 import android.view.View;
@@ -15,7 +16,8 @@ public class IngredientView {
     View view;
     DinnerModel model;
     String string = "";
-
+    Set<Dish> getTheMenu = new HashSet<Dish>();
+    Set<Ingredient> resultsBack = new HashSet<Ingredient>();
 
     public IngredientView(View view, DinnerModel model) {
 
@@ -31,7 +33,7 @@ public class IngredientView {
         TextView ingredientlist = (TextView) view.findViewById(R.id.ingredient_list);
 
 
-        Set<Ingredient> resultsBack = new HashSet<Ingredient>();
+        getTheMenu = model.getFullMenu();
         resultsBack = model.getAllIngredients();
 
         if (resultsBack.isEmpty()){

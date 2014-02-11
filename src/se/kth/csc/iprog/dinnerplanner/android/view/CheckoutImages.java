@@ -22,14 +22,15 @@ public class CheckoutImages {
     DinnerModel model;
     String imageString;
     String dishName;
-
+    Set<Dish> result2 = new HashSet<Dish>();
+    //Set<Dish> getSelectedDishes = new HashSet<Dish>();
     public CheckoutImages(View view, DinnerModel model) {
 
         // store in the class the reference to the Android View
         this.view = view;
         this.model = model;
+        //getSelectedDishes = model.getSelectedDishes(); FIX THIS LATER!
 
-        Set<Dish> result2 = new HashSet<Dish>();
         result2 = model.getFullMenu();
 
         for (Dish d : result2) {

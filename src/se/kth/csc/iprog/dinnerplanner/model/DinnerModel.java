@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class DinnerModel implements IDinnerModel { /****/
-    private int numberOfGuests=0;
+    private int numberOfGuests=1;
     private Set<Dish> selectedDishes = new HashSet<Dish>();
     private Set<Ingredient> ingredients;
     private float totalPrice;
@@ -163,6 +163,8 @@ public class DinnerModel implements IDinnerModel { /****/
             Dish dish3 = new Dish("Ice cream",Dish.DESERT,"icecream.jpg","Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.");
             selectedDishes.add(dish3);
         }**/
+        selectedDishes = dishes; // CHANGE THIS LATER TO WHAT IS ACTUALLY CHOSEN!!!!!!!!!!
+
         return this.selectedDishes;
 
     }

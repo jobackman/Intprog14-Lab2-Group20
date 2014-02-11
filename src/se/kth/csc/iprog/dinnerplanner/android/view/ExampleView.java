@@ -16,7 +16,7 @@ public class ExampleView {
 		this.view = view;
         this.model = model;
 		TextView example = (TextView) view.findViewById(R.id.example_text);
-		example.setText("Weclome to Dinner Planner! ");
+		example.setText("Welcome to Dinner Planner!" + '\n' + '\n' + "Here you will be able to plan your dinner.");
 
 
 		// Setup the rest of the view layout
