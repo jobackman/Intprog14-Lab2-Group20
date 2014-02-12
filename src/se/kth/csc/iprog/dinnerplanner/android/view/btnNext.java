@@ -6,13 +6,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class btnNext {
+public class BtnNext {
 
     View view;
     DinnerModel model;
     public Button nextButton;
 
-    public btnNext(View view, DinnerModel model) {
+    public BtnNext(View view, DinnerModel model) {
 
         // store in the class the reference to the Android View
         this.view = view;

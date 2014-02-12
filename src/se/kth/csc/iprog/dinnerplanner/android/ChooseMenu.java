@@ -1,12 +1,11 @@
 package se.kth.csc.iprog.dinnerplanner.android;
 
+import se.kth.csc.iprog.dinnerplanner.android.view.BtnNext;
 import se.kth.csc.iprog.dinnerplanner.android.view.Desert;
-import se.kth.csc.iprog.dinnerplanner.android.view.ExampleView;
 import se.kth.csc.iprog.dinnerplanner.android.view.MainCourse;
-import se.kth.csc.iprog.dinnerplanner.android.view.btnNext;
-import se.kth.csc.iprog.dinnerplanner.android.view.participants;
+import se.kth.csc.iprog.dinnerplanner.android.view.Participants;
+import se.kth.csc.iprog.dinnerplanner.android.view.Starter;
 import se.kth.csc.iprog.dinnerplanner.android.view.TotalCost;
-import se.kth.csc.iprog.dinnerplanner.android.view.starter;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import android.os.Bundle;
 import android.app.Activity;
@@ -26,13 +25,13 @@ public class ChooseMenu extends Activity {
         DinnerModel model = ((DinnerPlannerApplication) this.getApplication()).getModel();
         // Creating the view class instance
 
-        participants participantView = new participants(findViewById(R.id.participantsLayout), model);
+        Participants participantView = new Participants(findViewById(R.id.participantsLayout), model);
 
         // PASS THE MODEL AS A VARIABLE
         TotalCost costView = new TotalCost(findViewById(R.id.total_cost), model);
 
         //Starter menu KLAR
-        starter startermenu = new starter(findViewById(R.id.starter), model);
+        Starter startermenu = new Starter(findViewById(R.id.starter), model);
 
         //Main menu TBD
         MainCourse main = new MainCourse(findViewById(R.id.MainCourse), model);
@@ -41,7 +40,7 @@ public class ChooseMenu extends Activity {
         Desert dess = new Desert(findViewById(R.id.desert), model);
 
         //Next button
-        btnNext next = new btnNext(findViewById(R.id.next_button), model);//, model
+        BtnNext next = new BtnNext(findViewById(R.id.next_button), model);//, model
 
         /**nextButton.setOnClickListener(new View.OnClickListener() {
 

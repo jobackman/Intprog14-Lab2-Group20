@@ -13,21 +13,22 @@ import java.util.HashSet;
 
 public class CourseDescriptionView {
 
-    DinnerModel dynamicDescription = new DinnerModel();
+    //DinnerModel dynamicDescription = new DinnerModel();
     View view;
+    DinnerModel model;
     int type = 0;
     String dishType = "ASDADASDASD";
     String name = "sdfs";
     String description = "asdasdas";
+    Set<Dish> result2 = new HashSet<Dish>();
 
-
-    public CourseDescriptionView(View view) {
+    public CourseDescriptionView(View view, DinnerModel model) {
 
         // store in the class the reference to the Android View
         this.view = view;
+        this.model = model;
 
-        Set<Dish> result2 = new HashSet<Dish>();
-        result2 = dynamicDescription.getFullMenu();
+        result2 = model.getFullMenu();
         for (Dish d : result2) {
             type = d.getType();
             if (type==1){

@@ -13,7 +13,7 @@ import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import se.kth.csc.iprog.dinnerplanner.model.Dish;
 
 
-public class starter {
+public class Starter {
 
     View view;
     DinnerModel model;
@@ -24,7 +24,7 @@ public class starter {
     public TextView imgName;
     public ImageView image;
 
-    public starter(View view, DinnerModel model){
+    public Starter(View view, DinnerModel model){
 
         this.view = view;
         this.model = model;

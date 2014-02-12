@@ -91,14 +91,14 @@ public class DinnerModel implements IDinnerModel { /****/
 	}
 	
 	/**
-	 * Returns the set of dishes of specific type. (1 = starter, 2 = main, 3 = desert).
+	 * Returns the set of dishes of specific type. (1 = Starter, 2 = main, 3 = desert).
 	 */
 	public Set<Dish> getDishes(){
 		return dishes;
 	}
 	
 	/**
-	 * Returns the set of dishes of specific type. (1 = starter, 2 = main, 3 = desert).
+	 * Returns the set of dishes of specific type. (1 = Starter, 2 = main, 3 = desert).
 	 */
 	public Set<Dish> getDishesOfType(int type){
 		Set<Dish> result = new HashSet<Dish>();

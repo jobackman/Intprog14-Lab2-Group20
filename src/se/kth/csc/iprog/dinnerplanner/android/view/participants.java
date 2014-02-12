@@ -6,12 +6,12 @@ import android.view.View;
 import android.widget.TextView;
 
 
-public class participants {
+public class Participants {
 
         View view;
         public TextView participantsView;
         DinnerModel model;
-        public participants(View view, DinnerModel model) {
+        public Participants(View view, DinnerModel model) {
 
             // store in the class the reference to the Android View
             this.view = view;
